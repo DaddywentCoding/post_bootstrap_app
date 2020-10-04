@@ -6,17 +6,18 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
+    post = Post.create!(posts_params)
+    redirect_to post
   end
+  
+  private
 
-  def edit
+  def posts_params
+    params.require(:post).permit(:title, :content)
   end
-
-  def update
-  end
-
-  def destroy
-  end
+    
 end
