@@ -13,8 +13,14 @@
 
   <body>
     <!-- ***** リンクとhrタグ部分をカットし，次に置き換える ***** -->
-    <%= render "layouts/header" %>
-    <%= render "layouts/flash" %>    
-    <%= yield %>
+    <header>
+      <%= render "layouts/header" %>
+    </header>
+    <main>
+      <%= render "layouts/flash" %>
+      <div class="base-container">
+        <%= yield %>
+      </div>
+    </main>    
   </body>
 </html>
