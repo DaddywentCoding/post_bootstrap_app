@@ -29,6 +29,7 @@
      border: 2px solid red;
    } 
  }
+ 
 // 共通
 .base-container {
   @extend .container-fluid;
@@ -37,5 +38,15 @@
 } 
 body {
   padding-top: 56px;
+}
+
+// テーブル
+th,
+td {
+  vertical-align: middle !important;
+}
+
+.break-word {
+  word-break: break-word;
 }
 
