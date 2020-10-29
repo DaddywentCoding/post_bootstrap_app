@@ -14,7 +14,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
-
+require "csv"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -25,6 +25,11 @@ module PostBootstrapApp
     config.load_defaults 6.0
 
     config.i18n.default_locale = :ja
+
+     # ***** 以下を追加 *****
+    # lib/autoloads ディレクトリ配下のファイルを読み込む
+    config.autoload_paths << Rails.root.join("lib/autoloads")
+    # ***** 以上を追加 *****
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

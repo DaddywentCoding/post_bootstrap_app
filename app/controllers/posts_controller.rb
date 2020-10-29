@@ -29,11 +29,11 @@ class PostsController < ApplicationController
     redirect_to root_path, alert: "削除しました！"
   end
 
-  def edit    
-    # @post = Post.find(params[:id])    
+  def edit
+    # @post = Post.find(params[:id])
   end
 
-  def update    
+  def update
     # post = Post.find(params[:id])
 
     if @post.update(post_params)
